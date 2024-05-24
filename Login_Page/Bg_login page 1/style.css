@@ -1,0 +1,213 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+}
+
+.header{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    padding: 20px 100px;
+    /* background-color: red; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+}
+
+.header .logo{
+    font-size: 1.7em;
+    color: #fff;
+    text-decoration: none;
+}
+
+.header .logo img{
+    -webkit-filter: invert(100%);
+            filter: invert(100%);
+}
+
+.nav a{
+    position: relative;
+    font-size: 1.1em;
+    color: #fff;
+    text-decoration: none;
+    margin-left: 40px;
+}
+
+.nav a::after {
+    content: '';                  /* Creates an empty content for the pseudo-element */
+    position: absolute;           /* Positions the pseudo-element absolutely relative to the nearest positioned ancestor */
+    left: 0;                      /* Positions the pseudo-element at the left edge of the link */
+    bottom: -6px;                 /* Positions the pseudo-element 6 pixels below the bottom edge of the link */
+    width: 100%;                  /* Sets the width of the pseudo-element to 100% of the link's width */
+    height: 3px;                  /* Sets the height of the pseudo-element to 3 pixels */
+    background-color: #fff;       /* Sets the background color of the pseudo-element to white */
+    border-radius: 5px;           /* Rounds the corners of the pseudo-element */
+    transform: scaleX(0);         /* Initially scales the width of the pseudo-element to 0 (hidden) */
+}
+
+.nav a:hover::after {
+    transform: scaleX(1);         /* Scales the width of the pseudo-element to 100% (fully visible) */
+    transition: transform 0.3s ease-in-out; /* Adds a smooth transition effect */
+}
+
+.home{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url('back.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 80px 100px
+}
+
+.home .content{
+    max-width: ;width: 600px;
+    color: #fff;
+    /* text-shadow: 0 2px 4px rgba(0, 0, 0, .5); */
+
+}
+
+.content h2{
+    font-size: 3em;
+    /* margin-bottom: 20px; */
+    letter-spacing: 0.03em;
+}
+
+.content a{
+    color: #fff;
+    text-decoration: none;
+    border: 2px solid #fff;
+    font-weight: 500;
+    border-radius: 40px;
+    padding: 10px 40px;
+    transition: background 0.3s ease-in-out;
+}
+
+.content p{
+    margin: 10px 0 40px;
+}
+
+.content a:hover{
+    background: rgb(60, 46, 46);
+
+}
+
+.home .wrapper_login{
+    position: relative;
+    width: 440px;
+}
+
+.wrapper_login h2{
+    font-size: 2em;
+    color: #fff;
+    text-align: center;
+    /* margin-bottom: 20px; */
+}
+
+.wrapper_login .input_box{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 40px 0px;
+}
+
+.input_box input{
+
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: 1px solid #fff;
+    outline: none;
+    border-radius: 40px;
+    font-size: 1em;
+    color: #fff;
+    padding: 0 25px 0 45px;
+}
+
+.input_box label{
+    position: absolute;
+    top: 50%;
+    left: 45px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color: #fff;
+    pointer-events: none; 
+    transition: .5s;   
+}
+
+.input_box input:focus~label,
+.input_box input:focus~:valid{
+    font-size: .8em;
+    top: -14px;
+    left: 17px;
+}
+
+.input_box .icon img{
+    -webkit-filter: invert(100%);
+            filter: invert(100%);
+            position: absolute;
+            font-size: 1.2em;
+            top: 14px;
+            left: 15px;
+}
+
+.wrapper_login .remember_forgot{
+    font-size: .9em;
+    color: #fff;
+    margin: -25px 0 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.remember_forgot label input{
+    accent-color: black;
+    margin-right: 3px;
+}
+
+.remember_forgot a{
+    color: #fff;
+    text-decoration: none;
+
+}
+
+.remember_forgot a:hover{
+    text-decoration: underline;
+}
+
+.wrapper_login .btn{
+    width: 100%;
+    height: 50px;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    background: linear-gradient(90deg, #2a2626 0%, rgb(95, 46, 46) 100%);
+    box-shadow: 0 8px 10px rgba(0, 0, 0, .5);
+    cursor: pointer;
+    font-size: 1em;
+    color: #fff;
+    font-weight: 500;
+}
+
+.wrapper_login .register_link{
+    font-size: .9em;
+    color: #fff;
+    text-align: center;
+    margin: 30px 0;
+}
+
+.register_link p a{
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.register_link p a:hover{
+  text-decoration: underline;
+}
